@@ -1,0 +1,6 @@
+set term pngcairo size 2048, 2048 fontscale 4.0
+set output "exit_PR_STR.png"
+set xlabel "PELE steps"
+#set ylabel "SASA"
+set cbrange[0:8]; 
+plot for [i=1:127] for [j=0:8-1] ''.j.'/report_'.i u ($2+ (2*j)):5 lt 6 lc palette frac j/8. notitle w l
